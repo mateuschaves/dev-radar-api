@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 
+const routes = require('./routes');
+
 const app = express();
 
 mongoose.connect(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@cluster0-6e8hf.mongodb.net/DevRadar?retryWrites=true&w=majority`, {
@@ -11,12 +13,7 @@ mongoose.connect(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATAB
 });
 
 app.use(express.json());
-
-app.get('/users/:id', (request, response) => {
-    return response.json({
-        message: 'Hello World'
-    });
-});
+app.use(routes);
 
 app.listen(
     process.env.PORT,
