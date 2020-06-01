@@ -27,15 +27,15 @@ DATABASE_PASSWORD=
 ## Running the app
 
 ```bash
-# android
-$ react-native run-android
+# development
+$ npm run dev
 
-# ios
-$ react-native run-ios
+# production
+$ npm run start
 ```
 
 ## Related projects
 
 - [Front end - ReactJS](https://github.com/mateuschaves/DevRadarWEB)
-- [Fonrt end - React Native](https://github.com/mateuschaves/dev-radar-app)
+- [Front end - React Native](https://github.com/mateuschaves/dev-radar-app)
 
