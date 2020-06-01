@@ -12,6 +12,7 @@ module.exports = {
     async store(request, response) {
         const { github_username, techs, latitude, longitude } = request.body;
 
+        console.log(github_username);
         let dev = await Dev.findOne({ github_username });
 
         if (dev)
